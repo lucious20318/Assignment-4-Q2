@@ -44,11 +44,11 @@ public class Update <T extends images>
                 int r = y.size();
                 int c = y.get(0).size();
 
-                for(int i=0; i<r; i++)
+                for(int i=1; i<r+1; i++)
                 {
                     ArrayList<Integer> r_temp = new ArrayList<>();
 
-                    for(int j=0; j<c; j++)
+                    for(int j=1; j<c+1; j++)
                     {
                         System.out.print("Enter the element at (" + i +"," + j+ ") :" );
                         int ele = sc.nextInt();
@@ -78,11 +78,11 @@ public class Update <T extends images>
                 int r = y.size();
                 int c = y.get(0).size();
 
-                for(int i=0; i<r; i++)
+                for(int i=1; i<r+1; i++)
                 {
                     ArrayList<Integer> r_temp = new ArrayList<>();
 
-                    for(int j=0; j<c; j++)
+                    for(int j=1; j<c+1; j++)
                     {
                         System.out.print("Enter the element at (" + i +"," + j+ ") :" );
                         int ele = sc.nextInt();
@@ -111,11 +111,11 @@ public class Update <T extends images>
                 int r = y.size();
                 int c = y.get(0).size();
 
-                for(int i=0; i<r; i++)
+                for(int i=1; i<r+1; i++)
                 {
                     ArrayList<Integer> r_temp = new ArrayList<>();
 
-                    for(int j=0; j<c; j++)
+                    for(int j=1; j<c+1; j++)
                     {
                         System.out.print("Enter the element at (" + i +"," + j+ ") :" );
                         int ele = sc.nextInt();
@@ -133,13 +133,13 @@ public class Update <T extends images>
             else if(op.ret().equals(4))
             {
                 System.out.println("Returning....");
-                Main.main(args);
+                return;
             }
 
             else
             {
                 System.out.println("Wrong operation, Start again.....");
-                update_mat();
+                update_mat(img);
             }
         }
 
@@ -157,11 +157,11 @@ public class Update <T extends images>
             int r = y.size();
             int c = y.get(0).size();
 
-            for(int i=0; i<r; i++)
+            for(int i=1; i<r+1; i++)
             {
                 ArrayList<Integer> r_temp = new ArrayList<>();
 
-                for(int j=0; j<c; j++)
+                for(int j=1; j<c+1; j++)
                 {
                     System.out.print("Enter the element at (" + i +"," + j+ ") :" );
                     int ele = sc.nextInt();
@@ -180,7 +180,7 @@ public class Update <T extends images>
         {
             System.out.println("Wrong option, start again.");
             System.out.println();
-            update_mat();
+            update_mat(img);
         }
     }
 }
