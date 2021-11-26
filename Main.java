@@ -7,6 +7,10 @@ public class Main
     private static Scanner sc = new Scanner(System.in);
     private static Scanner scan = new Scanner(System.in);  
 
+    public static Menu obj = new Menu(opt);
+    public static images img = new images();
+    public static Update upd = new Update();
+
     public static void main(String[] args) 
     {
         System.out.println("    Main-Menu   ");
@@ -20,21 +24,26 @@ public class Main
         System.out.print("\nEnter your option: ");
         int opt = sc.nextInt();
 
-        Menu obj = new Menu(opt);
+        
+
 
         if(obj.ret().equals(1))
         {
-
+            img.Input_mat();
+            System.out.println();
+            main(args);
         }
         
         else if(obj.ret().equals(2))
         {
-
+            img.create_mat();
+            System.out.println();
+            main(args);
         }
 
         else if(obj.ret().equals(3))
         {
-
+            upd.update_mat(img);
         }
 
         else if(obj.ret().equals(4))
@@ -53,7 +62,7 @@ public class Main
             System.exit(0);
         }
 
-        else if(obj.ret() instanceof String)
+        else if(!(obj.ret() instanceof Integer))
         {
             System.out.println("Wrong option, start again.");
             System.out.println();
@@ -67,4 +76,6 @@ public class Main
             main(args);
         }
     }
+
+    
 }
